@@ -1,7 +1,5 @@
 import { Container } from '@chubbyts/chubbyts-dic-types/dist/container';
-import { createContainer, createParameter, Factory } from '@chubbyts/chubbyts-dic/dist/container';
-
-type ConcreteContainer = ReturnType<typeof createContainer>;
+import { ConcreteContainer, createContainer, createParameter, Factory } from '@chubbyts/chubbyts-dic/dist/container';
 
 type ContainerByConfigFactory = (concreteContainer?: ConcreteContainer) => ConcreteContainer;
 

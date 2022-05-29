@@ -24,14 +24,14 @@ Dependency injection container creation by config, inspired by [laminas-config][
 ## Requirements
 
  * node: 14
- * [@chubbyts/chubbyts-dic][3]: ^1.0.1
+ * [@chubbyts/chubbyts-dic][3]: ^1.0.2
 
 ## Installation
 
 Through [NPM](https://www.npmjs.com) as [@chubbyts/chubbyts-dic-config][1].
 
 ```ts
-npm i @chubbyts/chubbyts-dic-config@^1.0.0
+npm i @chubbyts/chubbyts-dic-config@^1.0.1
 ```
 
 ## Usage

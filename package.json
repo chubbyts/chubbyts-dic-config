@@ -1,6 +1,6 @@
 {
   "name": "@chubbyts/chubbyts-dic-config",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Dependency injection container creation by config, inspired by laminas-config.",
   "keywords": [
     "chubbyts",
@@ -47,7 +47,7 @@
     "node": ">=14"
   },
   "dependencies": {
-    "@chubbyts/chubbyts-dic": "^1.0.1",
+    "@chubbyts/chubbyts-dic": "^1.0.2",
     "@chubbyts/chubbyts-dic-types": "^1.0.0"
   },
   "devDependencies": {
