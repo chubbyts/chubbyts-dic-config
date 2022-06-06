@@ -19,7 +19,7 @@
 
 ## Description
 
-Dependency injection container creation by config, inspired by [laminas-config][2].
+Dependency injection container creation by config, inspired by [mezzio-config][2].
 
 ## Requirements
 
@@ -61,5 +61,5 @@ const container = containerByConfigFactory();
 Dominik Zogg 2022
 
 [1]: https://www.npmjs.com/package/@chubbyts/chubbyts-dic-config
-[2]: https://docs.laminas.dev/laminas-config/intro/
+[2]: https://docs.mezzio.dev/mezzio/v3/features/container/config/
 [3]: https://www.npmjs.com/package/@chubbyts/chubbyts-dic
