@@ -31,7 +31,7 @@ Dependency injection container creation by config, inspired by [laminas-config][
 Through [NPM](https://www.npmjs.com) as [@chubbyts/chubbyts-dic-config][1].
 
 ```ts
-npm i @chubbyts/chubbyts-dic-config@^1.0.1
+npm i @chubbyts/chubbyts-dic-config@^1.0.2
 ```
 
 ## Usage

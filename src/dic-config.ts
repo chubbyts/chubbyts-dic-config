@@ -4,7 +4,7 @@ import { ConcreteContainer, createContainer, createParameter, Factory } from '@c
 type ContainerByConfigFactory = (concreteContainer?: ConcreteContainer) => ConcreteContainer;
 
 export type ConfigFactory = (container: Container, name: string) => unknown;
-export type ConfigDelegator = (container: Container, name: string, factory: Factory) => unknown;
+export type ConfigDelegator = (container: Container, name: string, factory: () => unknown) => unknown;
 
 type Config = {
   dependencies?: {
