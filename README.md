@@ -58,7 +58,7 @@ const container = containerByConfigFactory();
 
 ## Copyright
 
-Dominik Zogg 2022
+2023 Dominik Zogg
 
 [1]: https://www.npmjs.com/package/@chubbyts/chubbyts-dic-config
 [2]: https://docs.mezzio.dev/mezzio/v3/features/container/config/
