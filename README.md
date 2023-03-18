@@ -24,7 +24,7 @@ Dependency injection container creation by config, inspired by [mezzio-config][2
 ## Requirements
 
  * node: 14
- * [@chubbyts/chubbyts-dic][3]: ^1.0.2
+ * [@chubbyts/chubbyts-dic][3]: ^1.0.3
 
 ## Installation
 
