@@ -1,6 +1,7 @@
 import { createContainer } from '@chubbyts/chubbyts-dic/dist/container';
 import { describe, expect, test } from '@jest/globals';
-import { ConfigDelegator, ConfigFactory, createContainerByConfigFactory } from '../src/dic-config';
+import type { ConfigDelegator, ConfigFactory } from '../src/dic-config';
+import { createContainerByConfigFactory } from '../src/dic-config';
 import { delegator1, delegator2, delegator3, factory1, factory2, Invokable1, Invokable2 } from './assets';
 
 describe('createContainerByConfigFactory', () => {
@@ -76,7 +77,7 @@ describe('createContainerByConfigFactory', () => {
   test('test delegators', () => {
     const containerByConfigFactory = createContainerByConfigFactory({
       dependencies: {
-        services: new Map<string, any>().set('name2', new Invokable1()),
+        services: new Map<string, unknown>().set('name2', new Invokable1()),
         factories: new Map<string, ConfigFactory>().set(Invokable1.name, factory1),
         aliases: new Map<string, string>().set('name1', Invokable1.name),
         delegators: new Map<string, Array<ConfigDelegator>>()

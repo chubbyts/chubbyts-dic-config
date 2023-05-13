@@ -1,5 +1,6 @@
-import { Container } from '@chubbyts/chubbyts-dic-types/dist/container';
-import { ConcreteContainer, createContainer, createParameter, Factory } from '@chubbyts/chubbyts-dic/dist/container';
+import type { Container } from '@chubbyts/chubbyts-dic-types/dist/container';
+import type { ConcreteContainer, Factory } from '@chubbyts/chubbyts-dic/dist/container';
+import { createContainer, createParameter } from '@chubbyts/chubbyts-dic/dist/container';
 
 type ContainerByConfigFactory = (concreteContainer?: ConcreteContainer) => ConcreteContainer;
 
@@ -43,7 +44,7 @@ const addAliases = (concreteContainer: ConcreteContainer, aliases: Map<string, s
 const addDelegators = (
   concreteContainer: ConcreteContainer,
   delegators: Map<string, Array<ConfigDelegator>>,
-  services: Map<string, any>,
+  services: Map<string, unknown>,
   aliases: Map<string, string>,
 ): void => {
   delegators.forEach((delegatorList: Array<ConfigDelegator>, name: string) => {
@@ -75,7 +76,7 @@ export const createContainerByConfigFactory = (config: Config): ContainerByConfi
       return concreteContainer;
     }
 
-    const services = dependencies.services || new Map<string, any>();
+    const services = dependencies.services || new Map<string, unknown>();
     const factories = dependencies.factories || new Map<string, ConfigFactory>();
     const aliases = dependencies.aliases || new Map<string, string>();
     const delegators = dependencies.delegators || new Map<string, Array<ConfigDelegator>>();
