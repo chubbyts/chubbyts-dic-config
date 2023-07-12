@@ -24,15 +24,15 @@ Dependency injection container creation by config, inspired by [mezzio-config][2
 ## Requirements
 
  * node: 16
- * [@chubbyts/chubbyts-dic][3]: ^1.1.0
- * [@chubbyts/chubbyts-dic-types][4]: ^1.1.0
+ * [@chubbyts/chubbyts-dic][3]: ^1.1.1
+ * [@chubbyts/chubbyts-dic-types][4]: ^1.1.1
 
 ## Installation
 
 Through [NPM](https://www.npmjs.com) as [@chubbyts/chubbyts-dic-config][1].
 
 ```ts
-npm i @chubbyts/chubbyts-dic-config@^1.1.0
+npm i @chubbyts/chubbyts-dic-config@^1.1.1
 ```
 
 ## Usage
