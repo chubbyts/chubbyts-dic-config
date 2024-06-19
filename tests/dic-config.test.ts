@@ -1,5 +1,5 @@
 import { createContainer } from '@chubbyts/chubbyts-dic/dist/container';
-import { describe, expect, test } from '@jest/globals';
+import { describe, expect, test } from 'vitest';
 import type { ConfigDelegator, ConfigFactory } from '../src/dic-config';
 import { createContainerByConfigFactory } from '../src/dic-config';
 import { delegator1, delegator2, delegator3, factory1, factory2, Invokable1, Invokable2 } from './assets';
