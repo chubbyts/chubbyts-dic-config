@@ -41,6 +41,7 @@ describe('createContainerByConfigFactory', () => {
   test('test factories', () => {
     const containerByConfigFactory = createContainerByConfigFactory({
       dependencies: {
+        // eslint-disable-next-line functional/immutable-data
         factories: new Map<string, ConfigFactory>().set(Invokable1.name, factory1).set(Invokable2.name, factory2),
       },
     });
@@ -58,6 +59,7 @@ describe('createContainerByConfigFactory', () => {
     const containerByConfigFactory = createContainerByConfigFactory({
       dependencies: {
         factories: new Map<string, ConfigFactory>().set(Invokable1.name, factory1),
+        // eslint-disable-next-line functional/immutable-data
         aliases: new Map<string, string>().set('name1', Invokable1.name).set('name2', Invokable1.name),
       },
     });
@@ -80,6 +82,7 @@ describe('createContainerByConfigFactory', () => {
         services: new Map<string, unknown>().set('name2', new Invokable1()),
         factories: new Map<string, ConfigFactory>().set(Invokable1.name, factory1),
         aliases: new Map<string, string>().set('name1', Invokable1.name),
+        // eslint-disable-next-line functional/immutable-data
         delegators: new Map<string, Array<ConfigDelegator>>()
           .set('name2', [delegator1, delegator2])
           .set(Invokable1.name, [delegator1, delegator2])
@@ -119,7 +122,7 @@ describe('createContainerByConfigFactory', () => {
 
     try {
       container.get(Invokable1.name);
-      fail('Expected error');
+      throw new Error('Expected error');
     } catch (e) {
       const { name, message, cause } = e as Error & { cause: Error };
       expect(name).toBe('Error');
