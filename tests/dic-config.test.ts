@@ -102,13 +102,13 @@ describe('createContainerByConfigFactory', () => {
 
     expect(service1.key1).toBe('value1');
     expect(service1.key2).toBe('value2');
-    expect(service1.key3).toBe(undefined);
+    expect(service1.key3).toBeUndefined();
 
     const service2: Invokable1 = container.get('name2');
 
-    expect(service2.key1).toBe(undefined);
-    expect(service2.key2).toBe(undefined);
-    expect(service1.key3).toBe(undefined);
+    expect(service2.key1).toBeUndefined();
+    expect(service2.key2).toBeUndefined();
+    expect(service1.key3).toBeUndefined();
   });
 
   test('test delegators missing factory', () => {

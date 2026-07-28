@@ -41,6 +41,18 @@ const addAliases = (concreteContainer: ConcreteContainer, aliases: Map<string, s
   });
 };
 
+const createDelegatorFactory =
+  (name: string, delegator: ConfigDelegator): Factory =>
+  (container: Container, previous?: Factory): unknown => {
+    if (!previous) {
+      throw new Error('Missing previous');
+    }
+
+    return delegator(container, name, () => {
+      return previous(container);
+    });
+  };
+
 const addDelegators = (
   concreteContainer: ConcreteContainer,
   delegators: Map<string, Array<ConfigDelegator>>,
@@ -53,15 +65,7 @@ const addDelegators = (
     }
 
     delegatorList.forEach((delegator: ConfigDelegator) => {
-      concreteContainer.set(name, (container: Container, previous?: Factory): unknown => {
-        if (!previous) {
-          throw new Error('Missing previous');
-        }
-
-        return delegator(container, name, () => {
-          return previous(container);
-        });
-      });
+      concreteContainer.set(name, createDelegatorFactory(name, delegator));
     });
   });
 };
