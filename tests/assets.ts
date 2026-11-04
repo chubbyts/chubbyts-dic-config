@@ -1,5 +1,5 @@
 import type { Container } from '@chubbyts/chubbyts-dic-types/dist/container';
-import type { ConfigDelegator, ConfigFactory } from '../src/dic-config';
+import type { ConfigDelegator, ConfigFactory } from '../src/dic-config.js';
 
 export class Invokable1 {
   public key1?: string;
