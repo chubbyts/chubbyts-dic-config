@@ -1,4 +1,4 @@
-import { createContainer } from '@chubbyts/chubbyts-dic/dist/container';
+import { createContainer } from '@chubbyts/chubbyts-dic/container';
 import { describe, expect, test } from 'vitest';
 import type { ConfigDelegator, ConfigFactory } from '../src/dic-config.js';
 import { createContainerByConfigFactory } from '../src/dic-config.js';

@@ -1,4 +1,4 @@
-import type { Container } from '@chubbyts/chubbyts-dic-types/dist/container';
+import type { Container } from '@chubbyts/chubbyts-dic-types/container';
 import type { ConfigDelegator, ConfigFactory } from '../src/dic-config.js';
 
 export class Invokable1 {
